@@ -1,8 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My title</title> <link
-rel='stylesheet' type='text/css' href='styles.css'> </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System - Secure Login</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 <body>
-<h1>A great title</h1> </body>
+    <div class="container">
+        <div class="login-container">
+            <div class="header">
+                <h1><i class="fas fa-book-reader"></i> Library System</h1>
+                <p class="subtitle">Secure Librarian Login</p>
+            </div>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i> Username
+                    </label>
+                    <input type="text" id="username" name="username" required 
+                           placeholder="Enter your username" autocomplete="username">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i> Password
+                    </label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" required 
+                               placeholder="Enter your password" autocomplete="current-password">
+                        <button type="button" id="togglePassword" class="password-toggle">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="form-group remember">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                
+                <button type="submit" class="btn-login">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+                
+                <div class="security-info">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Your session is protected with encryption</span>
+                </div>
+            </form>
+            
+            <div class="messages" id="messageArea"></div>
+            
+            <div class="footer">
+                <p>Need help? <a href="#" id="helpLink">Contact administrator</a></p>
+                <p class="copyright">Library System © 2024</p>
+            </div>
+        </div>
+        
+        <div class="info-panel">
+            <h2><i class="fas fa-info-circle"></i> Security Features</h2>
+            <ul class="features">
+                <li><i class="fas fa-check-circle"></i> Encrypted password storage</li>
+                <li><i class="fas fa-check-circle"></i> Session timeout protection</li>
+                <li><i class="fas fa-check-circle"></i> Brute force attack prevention</li>
+                <li><i class="fas fa-check-circle"></i> Secure database connection</li>
+                <li><i class="fas fa-check-circle"></i> HTTPS recommended</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="auth.js"></script>
+</body>
 </html>
