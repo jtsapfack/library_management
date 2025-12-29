@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Return Book</title>
+</head>
+<body>
+  <h2>Return Book</h2>
+
+  <form action="process_return.php" method="POST">
+    <label>Member Name:</label>
+    <input type="text" name="member" required><br><br>
+
+    <label>Book Title:</label>
+    <input type="text" name="book" required><br><br>
+
+    <label>Return Date:</label>
+    <input type="date" name="return_date" id="returnDate" readonly><br><br>
+
+    <button type="submit">Return</button>
+  </form>
+
+  <script src="return.js"></script>
+</body>
+</html>
