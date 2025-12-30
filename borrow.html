@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrow Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="login-container">
+        <div class="header">
+            <h1>📚 Borrow Book</h1>
+            <p class="subtitle">Record a new book borrowing</p>
+        </div>
+
+        <form class="login-form" action="process_borrow.php" method="POST">
+
+            <div class="form-group">
+                <label>Member Name</label>
+                <input type="text" name="member" placeholder="Enter member name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Book Title</label>
+                <input type="text" name="book" placeholder="Enter book title" required>
+            </div>
+
+            <div class="form-group">
+                <label>Borrow Date</label>
+                <input type="date" name="borrow_date" id="borrowDate" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Due Date</label>
+                <input type="date" name="due_date" id="dueDate" readonly>
+            </div>
+
+            <button type="submit" class="btn-login">
+                Borrow Book
+            </button>
+
+        </form>
+    </div>
+
+    <div class="info-panel">
+        <h2>📘 Borrowing Info</h2>
+        <ul class="features">
+            <li>✔ Auto borrow date</li>
+            <li>✔ Due date calculation</li>
+            <li>✔ Inventory update</li>
+        </ul>
+    </div>
+
+</div>
+
+<script src="borrow.js"></script>
+</body>
+</html>

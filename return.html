@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Return Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="login-container">
+    <div class="header">
+      <h1>📦 Return Book</h1>
+      <p class="subtitle">Record a returned book</p>
+    </div>
+
+    <form class="login-form" action="process_return.php" method="POST">
+
+      <div class="form-group">
+        <label>Member Name</label>
+        <input type="text" name="member" placeholder="Enter member name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Book Title</label>
+        <input type="text" name="book" placeholder="Enter book title" required>
+      </div>
+
+      <div class="form-group">
+        <label>Return Date</label>
+        <input type="date" name="return_date" id="returnDate" readonly>
+      </div>
+
+      <button type="submit" class="btn-login">
+        Return Book
+      </button>
+
+    </form>
+  </div>
+
+  <div class="info-panel">
+    <h2>📦 Return Info</h2>
+    <ul class="features">
+      <li>✔ Auto return date</li>
+      <li>✔ Inventory increment</li>
+      <li>✔ Overdue validation</li>
+    </ul>
+  </div>
+
+</div>
+
+<script src="return.js"></script>
+</body>
+</html>
